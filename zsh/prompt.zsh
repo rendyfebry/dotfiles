@@ -20,9 +20,9 @@ git_info() {
   else
     if [[ $($git status --porcelain) == "" ]]
     then
-      echo "%{%B%F{green}%}($(git_branch))%f%b"
+      echo "%{%F{blue}%}($(git_branch))%f"
     else
-      echo "%{%B%F{red}%}($(git_branch))%f%b"
+      echo "%{%F{red}%}($(git_branch))%f"
     fi
   fi
 }
