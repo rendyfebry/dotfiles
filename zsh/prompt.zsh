@@ -10,7 +10,17 @@ else
 fi
 
 git_branch() {
-  echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  branch=$($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo "%{$fg[red]%}${branch}"
+}
+
+git_dirty_info() {
+  if [[ $($git status --porcelain) == "" ]]
+  then
+    echo ""
+  else
+    echo " %{$fg[yellow]%}✗"
+  fi
 }
 
 git_info() {
@@ -18,21 +28,16 @@ git_info() {
   then
     echo ""
   else
-    if [[ $($git status --porcelain) == "" ]]
-    then
-      echo "%{%F{green}%}($(git_branch))%f"
-    else
-      echo "%{%F{red}%}($(git_branch))%f"
-    fi
+    echo "%{$fg[blue]%}git:($(git_branch)%{$fg[blue]%})$(git_dirty_info) "
   fi
 }
 
 prefix() {
-  echo "%{%B%F{green}%}➜%f%b"
+  echo "%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 }
 
 directory_name() {
-  echo "%{%F{cyan}%}%c%f"
+  echo "%{$fg[cyan]%}%c "
 }
 
 battery_status() {
@@ -47,7 +52,7 @@ battery_status() {
   fi
 }
 
-export PROMPT=$'$(prefix) $(directory_name) $(git_info) '
+export PROMPT=$'$(prefix)$(directory_name)$(git_info)'
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
