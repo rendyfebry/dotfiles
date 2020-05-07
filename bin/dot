@@ -50,6 +50,17 @@ $ZSH/homebrew/install.sh 2>&1
 echo "› brew update"
 brew update
 
+# Install Brew package
+echo "› brew install packages"
+brew install \
+	openssl \
+	git \
+	vim \
+	zsh \
+	wget \
+	go \
+	python@3.8 
+
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
