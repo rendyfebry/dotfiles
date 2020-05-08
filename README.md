@@ -9,8 +9,6 @@ My personal dotfiles, an automated way to setup a new system. Heavily inspired b
 
 ## Install
 
-Run this:
-
 ```sh
 git clone https://github.com/rendyfebry/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
