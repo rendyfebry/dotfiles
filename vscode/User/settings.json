@@ -1,0 +1,16 @@
+{
+	"editor.fontSize": 12,
+	"editor.lineHeight": 16,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.roundedSelection": false,
+	"editor.minimap.enabled": true,
+	"editor.minimap.renderCharacters": false,
+	"editor.snippetSuggestions": "top",
+	"editor.formatOnSave": true,
+	"editor.renderWhitespace": "all",
+	"explorer.openEditors.visible": 0,
+	"workbench.colorTheme": "Monokai Dimmed",
+	"workbench.activityBar.visible": true,
+	"prettier.useTabs": true
+}
