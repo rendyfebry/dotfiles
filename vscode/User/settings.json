@@ -10,7 +10,7 @@
 	"editor.formatOnSave": true,
 	"editor.renderWhitespace": "all",
 	"explorer.openEditors.visible": 0,
-	"workbench.colorTheme": "Monokai Dimmed",
+	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.activityBar.visible": true,
 	"prettier.useTabs": true,
 	"go.formatTool": "goimports",
