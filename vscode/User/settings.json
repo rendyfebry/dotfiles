@@ -12,5 +12,7 @@
 	"explorer.openEditors.visible": 0,
 	"workbench.colorTheme": "Monokai Dimmed",
 	"workbench.activityBar.visible": true,
-	"prettier.useTabs": true
+	"prettier.useTabs": true,
+	"go.formatTool": "goimports",
+	"go.useLanguageServer": true
 }
