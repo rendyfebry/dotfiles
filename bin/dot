@@ -59,6 +59,7 @@ brew install \
 	zsh \
 	wget \
 	go \
+	dep \
 	python@3.8 
 
 # Install software
