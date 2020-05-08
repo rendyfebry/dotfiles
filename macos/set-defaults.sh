@@ -39,3 +39,55 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# ==============================================================================
+# Power
+# ==============================================================================
+
+# Battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
+# ==============================================================================
+# Screen
+# ==============================================================================
+
+# Screenshoot location
+defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
+
+# Save screenshots in PNG format
+defaults write com.apple.screencapture type -string "png"
+
+# Disable floating screenshot thumbnail
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
+
+# ==============================================================================
+# Finder
+# ==============================================================================
+
+# Open home directory by default
+defaults write com.apple.finder NewWindowTarget PfHm
+
+# Show icons for external hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# ==============================================================================
+# Dock
+# ==============================================================================
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Set icon size to 45
+defaults write com.apple.dock tilesize -int 45
+
+# Restart dock
+killall Dock
