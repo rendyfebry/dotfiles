@@ -88,6 +88,3 @@ defaults write com.apple.dock show-recents -bool false
 
 # Set icon size to 45
 defaults write com.apple.dock tilesize -int 45
-
-# Restart dock
-killall Dock
