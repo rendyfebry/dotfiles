@@ -46,22 +46,6 @@ $ZSH/macos/set-defaults.sh
 # Install homebrew
 $ZSH/homebrew/install.sh 2>&1
 
-# Upgrade homebrew
-echo "› brew update"
-brew update
-
-# Install Brew package
-echo "› brew install packages"
-brew install \
-	openssl \
-	git \
-	vim \
-	zsh \
-	wget \
-	go \
-	dep \
-	python@3.8 
-
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install

@@ -21,4 +21,21 @@ then
 
 fi
 
+# Update homebrew
+echo "   Update Brew"
+brew update
+
+# Install Brew package
+echo "  Install essential packages with Homebrew"
+brew install \
+  openssl \
+  git \
+  vim \
+  zsh \
+  wget \
+  go \
+  dep \
+  serve \
+  python@3.8 
+
 exit 0
