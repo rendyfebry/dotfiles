@@ -10,6 +10,8 @@
 	"editor.formatOnSave": true,
 	"editor.renderWhitespace": "all",
 	"explorer.openEditors.visible": 0,
+	"workbench.settings.useSplitJSON": true,
+	"workbench.settings.editor": "json",
 	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.activityBar.visible": true,
 	"prettier.useTabs": true,
