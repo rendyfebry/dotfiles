@@ -38,4 +38,8 @@ brew install \
   serve \
   python@3.8 
 
+# Add Heroku
+brew tap heroku/brew
+brew install heroku
+
 exit 0
