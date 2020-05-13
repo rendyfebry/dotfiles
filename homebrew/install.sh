@@ -34,6 +34,7 @@ brew install \
   zsh \
   wget \
   go \
+  protobuf \
   dep \
   serve \
   python@3.8 
