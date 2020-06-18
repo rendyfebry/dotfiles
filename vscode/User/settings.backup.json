@@ -15,11 +15,7 @@
 	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.activityBar.visible": true,
 	"prettier.useTabs": true,
-	"go.formatTool": "goimports",
-	"go.useLanguageServer": true,
-	"go.toolsEnvVars": {
-		"GO111MODULE": "on" // seting env untuk go module on
-	},
+	"go.useLanguageServer": false, // karena useLanguageServer masih dalam aktif development, kalo gak pake module nyalain aja
 	"go.coverageDecorator": {
 		//  ini untuk melihat coverage test, test dulu nanti akan ada warna warna di text editornya
 		"type": "gutter",
@@ -27,6 +23,11 @@
 		"uncoveredHighlightColor": "rgba(128,64,64,0.25)",
 		"coveredGutterStyle": "blockblue",
 		"uncoveredGutterStyle": "slashyellow"
+	},
+	"go.formatTool": "goimports", //  di rekomendasikan pakai goimports dibanding gofmt, pada dasarnya goimports melakukan apa yang dilakukan gofmt
+	"go.lintTool": "golangci-lint", //  lebih kaya fiturnya https://github.com/golangci/golangci-lint
+	"go.toolsEnvVars": {
+		"GO111MODULE": "on" // seting env untuk go module on
 	},
 	"go.gopath": "/Users/rendyfebry/go", // path url untuk gopath
 	"go.delveConfig": {
@@ -45,28 +46,5 @@
 		// set env ketika melakukan test dari vscode
 		"DB_CONNECTION": ""
 	},
-	"go.docsTool": "gogetdoc",
-	"[go]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		},
-		// Optional: Disable snippets, as they conflict with completion ranking.
-		"editor.snippetSuggestions": "none"
-	},
-	"[go.mod]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		}
-	},
-	"gopls": {
-		// Add parameter placeholders when completing a function.
-		"usePlaceholders": true,
-
-		// If true, enable additional analyses with staticcheck.
-		// Warning: This will significantly increase memory usage.
-		"staticcheck": false
-	},
-	"window.zoomLevel": 0
+	"go.docsTool": "gogetdoc"
 }

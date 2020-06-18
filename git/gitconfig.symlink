@@ -9,6 +9,7 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
         diff = auto
         status = auto
@@ -32,4 +33,22 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [credential]
-	helper = osxkeychain
+        helper = osxkeychain
+
+[url "git@gitlab.warungpintar.co:"]
+        insteadOf = https://gitlab.warungpintar.co/
+
+[url "git@gitlab.com:"]
+        insteadOf = https://gitlab.com/
+
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Rendy Febry
+	email = rendyfebry@gmail.com
